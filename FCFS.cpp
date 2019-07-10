@@ -17,10 +17,11 @@ float totalTAT=0,totalWT=0;
 n=7; // number of processes
 cout<<"\n For Turn "<<t+1;
 
+at[0]=0;
 for(int i=0;i<n;i++)
 {
-at[i]=rand()%10;
-bt[i]=rand()%10;
+at[i+1]=rand()%5 + 1;
+bt[i]=rand()%5 + 1;
 }
 
 /*
@@ -42,7 +43,7 @@ totalTAT+=tat[k];
 //calculate WT
 for(int k=0;k<n;k++)
 {
-wt[k]=tat[k]-bt[k];
+wt[k]=abs(tat[k]-bt[k]);
 totalWT+=wt[k];
 }
 
